@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Chat de preparación para la certificación de tecnologías Microsoft."
+    >
+    <title>Certificador de Tecnologías de Microsoft</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Inicio">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span>Certificador de Tecnologías de Microsoft</span>
+        </a>
+        <span class="service-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Asistente listo
+        </span>
+      </header>
+
+      <section class="chat-card" aria-labelledby="chat-title">
+        <div class="chat-heading">
+          <div>
+            <p class="eyebrow">Tu compañero de estudio</p>
+            <h1 id="chat-title">Prepárate para tu certificación</h1>
+            <p class="heading-copy">
+              Pregunta sobre tecnologías Microsoft, conceptos y rutas de aprendizaje.
+            </p>
+          </div>
+          <span class="heading-icon" aria-hidden="true">✦</span>
+        </div>
+
+        <div class="chat-layout">
+          <aside class="history-panel" aria-labelledby="history-title">
+            <div class="history-heading">
+              <div>
+                <h2 id="history-title">Conversaciones</h2>
+                <p>Guardadas en este navegador</p>
+              </div>
+              <button id="new-chat-button" class="new-chat-button" type="button">
+                <span aria-hidden="true">＋</span>
+                Nueva
+              </button>
+            </div>
+            <p id="history-status" class="history-status" role="status" aria-live="polite"></p>
+            <ul id="conversation-list" class="conversation-list" aria-label="Conversaciones anteriores"></ul>
+            <p class="history-note">Se conservan hasta 20 conversaciones en este navegador.</p>
+          </aside>
+
+          <section class="chat-panel" aria-label="Chat seleccionado">
+            <div
+              id="messages"
+              class="messages"
+              role="log"
+              aria-label="Mensajes de la conversación"
+              aria-live="polite"
+              aria-relevant="additions text"
+            ></div>
+
+            <p id="chat-status" class="chat-status" role="status" aria-live="polite"></p>
+
+            <form id="chat-form" class="composer">
+              <label class="visually-hidden" for="message-input">Tu mensaje</label>
+              <textarea
+                id="message-input"
+                name="message"
+                rows="1"
+                maxlength="2000"
+                placeholder="Escribe tu pregunta..."
+                autocomplete="off"
+                required
+              ></textarea>
+              <button id="send-button" class="send-button" type="submit" aria-label="Enviar mensaje">
+                <span>Enviar</span>
+                <span aria-hidden="true">↑</span>
+              </button>
+            </form>
+            <p class="composer-note">Hasta 2000 caracteres. Revisa la información importante.</p>
+          </section>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>Microsoft Foundry · Asistente con inteligencia artificial</span>
+        <span>No compartas información personal o confidencial.</span>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "certificador-tecnologias-microsoft",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --env-file-if-exists=.env --watch server.js",
+    "create-agent": "node --env-file-if-exists=.env scripts/create-agent.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@azure/ai-projects": "^2.8.0",
+    "@azure/identity": "^4.13.0",
+    "express": "^5.1.0"
+  }
+}
